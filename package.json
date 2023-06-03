@@ -1,0 +1,69 @@
+{
+  "name": "characterai",
+  "version": "0.1.0",
+  "description": "",
+  "keywords": [
+    "characterai"
+  ],
+  "homepage": "https://github.com/Valen-H/Characterai#README.md",
+  "bugs": {
+    "url": "https://github.com/Valen-H/Characterai/issues",
+    "email": "alternativexxxy@gmail.com"
+  },
+  "license": "ISC",
+  "author": "V. H. <alternativexxxy@gmail.com> (https://github.com/Valen-H)",
+  "contributors": [],
+  "files": [
+    "*"
+  ],
+  "main": "./dist/lib/characterai.js",
+  "man": [],
+  "directories": {
+    "lib": "./lib",
+    "bin": "./bin",
+    "man": "./man",
+    "doc": "./doc",
+    "example": "./test",
+    "test": "./test"
+  },
+  "typings": "./lib/typings/lib/characterai.d.ts",
+  "typesVersions": {
+    ">=3.0": {
+      "*": [
+        "./lib/*"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Valen-H/Characterai.git",
+    "directory": "./"
+  },
+  "config": {
+    "port": 8080
+  },
+  "engines": {
+    "node": ">=13.0.0",
+    "npm": ">=4.0.0"
+  },
+  "engineStrict": true,
+  "os": [],
+  "cpu": [],
+  "preferGlobal": false,
+  "private": false,
+  "publishConfig": {},
+  "scripts": {
+    "start": "node test/index.js",
+    "test": "node --trace-uncaught test/index.js",
+    "debug": "node --trace-uncaught --expose-gc --inspect -r ./ test/index.js",
+    "build": "tsc -w",
+    "doc": "rm -rf ./doc/** && jsdoc ./dist -r -c jsdoc.json -d ./doc -R README.md -P package.json",
+    "prepack": "rm *.tgz || true"
+  },
+  "bundleDependencies": [],
+  "dependencies": {
+    "puppeteer": "^20.5.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}
